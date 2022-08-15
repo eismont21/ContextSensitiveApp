@@ -11,38 +11,44 @@ var DecisionTreeClassifier = function() {
     this.predict = function(features) {
         var classes = new Array(3);
             
-        if (features[65] <= 0.0015358448144979775) {
-            classes[0] = 0; 
-            classes[1] = 0; 
-            classes[2] = 42; 
-        } else {
-            if (features[0] <= -74.87500190734863) {
-                if (features[66] <= 0.16236110031604767) {
-                    if (features[13] <= 44.5) {
-                        if (features[64] <= 0.06825782172381878) {
-                            classes[0] = 0; 
-                            classes[1] = 2; 
-                            classes[2] = 0; 
-                        } else {
-                            classes[0] = 0; 
-                            classes[1] = 0; 
-                            classes[2] = 1; 
-                        }
-                    } else {
+        if (features[3] <= -4.539999961853027) {
+            if (features[1] <= 0.022358634509146214) {
+                if (features[0] <= 0.038555318489670753) {
+                    if (features[4] <= 30.0) {
                         classes[0] = 0; 
                         classes[1] = 0; 
                         classes[2] = 5; 
+                    } else {
+                        classes[0] = 0; 
+                        classes[1] = 1; 
+                        classes[2] = 0; 
                     }
                 } else {
                     classes[0] = 0; 
-                    classes[1] = 36; 
-                    classes[2] = 0; 
+                    classes[1] = 0; 
+                    classes[2] = 108; 
                 }
             } else {
-                classes[0] = 20; 
-                classes[1] = 0; 
-                classes[2] = 0; 
+                if (features[2] <= -4.260863542556763) {
+                    if (features[5] <= 2.6872974634170532) {
+                        classes[0] = 0; 
+                        classes[1] = 0; 
+                        classes[2] = 1; 
+                    } else {
+                        classes[0] = 0; 
+                        classes[1] = 93; 
+                        classes[2] = 0; 
+                    }
+                } else {
+                    classes[0] = 0; 
+                    classes[1] = 0; 
+                    classes[2] = 3; 
+                }
             }
+        } else {
+            classes[0] = 96; 
+            classes[1] = 0; 
+            classes[2] = 0; 
         }
     
         return findMax(classes);
@@ -51,7 +57,7 @@ var DecisionTreeClassifier = function() {
 };
 
 if (typeof process !== 'undefined' && typeof process.argv !== 'undefined') {
-    if (process.argv.length - 2 === 90) {
+    if (process.argv.length - 2 === 6) {
 
         // Features:
         var features = process.argv.slice(2);
