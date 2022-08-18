@@ -2,7 +2,7 @@
 Context-sensitive application using ML is developed in scope of the lecture Context Sensitive Systems.
 
 This app consists of three parts:
-1. Record App: App for collecting data from the smartphone and upload to edge-ml cloud using accelerometer for three classes:
+1. Record App: App for collecting data from the smartphone accelerometer and upload to edge-ml cloud for three classes:
    1. Reading: just looking on the smartphone
    2. Chatting: the same orientation but typing with keyboard
    3. Calling: Keeping smartphone near the ear and speaking
