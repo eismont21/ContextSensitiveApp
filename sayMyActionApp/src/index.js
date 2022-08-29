@@ -7,6 +7,11 @@ import {DecisionTreeClassifier} from "./model.js"
 
 const clf = new DecisionTreeClassifier()
 const labels = ["Calling 📞", "Chatting ⌨️", "Reading 📘"]
+const imgPathes = [
+  "../images/cat_calling.gif",
+  "../images/cat_typing.gif",
+  "../images/cat_reading.gif"
+]
 let prediction = null
 let evts = []
 let firstSecond = 0
@@ -57,6 +62,12 @@ const predict = function () {
     const inputVector = generateInputData(data)
     const pred = clf.predict(inputVector)
     document.getElementById("result").innerHTML = labels[pred]
+    const img = document.createElement("img")
+    img.src = imgPathes[pred]
+    img.setAttribute("height", "160")
+    img.setAttribute("width", "200")
+    document.getElementById("result").appendChild(document.createElement("br"))
+    document.getElementById("result").appendChild(img)
   }
   evts = []
 }
